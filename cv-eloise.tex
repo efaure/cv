@@ -1,0 +1,321 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+%\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.2cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue!60,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 1,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{}{Eloïse Faure}
+      {Cloud \& DevOps Architect}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[scale=0.36]{img/eloise.png}
+  ~
+  \section{Personnal information}
+  ~
+{\includegraphics[width=0.4cm]{img/mobile_icon.pdf}} \textbf{ +33 6 98 81 42 30 }  \vspace{6pt}
+%
+\raisebox{-2\lineskip}{\includegraphics[width=0.4cm]{img/mail_icon.pdf}}  \href{mailto:faure.eloise@gmail.com}{\textbf{faure.eloise@}gmail.com}\vspace{4pt}
+%
+{\includegraphics[width=0.4cm]{img/localisation.png}}  Argenteuil, France \vspace{4pt}
+%
+{\includegraphics[width=0.4cm]{img/nationality.png}}    \enspace French 
+~
+    \section{Experience}
+    ~
+    	\textbf{13 years} experience in 	\textbf{development} and 	\textbf{DevOps}
+    	~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+    \section{Main skills}
+    ~
+  \smartdiagram[bubble diagram]{
+  	\textbf{Devops},
+  	\textbf{Cloud},
+  	\textbf{Container},
+  	\textbf{Automation},
+  	\textbf{Security},
+  	\textbf{Monitoring},
+  	\textbf{Dev}
+  }
+    ~
+    ~
+    \section{Languages}
+    ~
+    \textbf{French}\includegraphics[scale=0.40]{img/5stars.png}\vspace{4pt}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+    ~    
+\end{aside}
+~
+\newlength{\parsepsave}
+\section{\ About\ me} 
+ \qquad I am a dev who turned devops. 
+ 
+ \vspace{-4pt}
+ \qquad  As a consultant and then DevOps architect at Red Hat I began my path to the Ops side. Naturally I completed my range of existing skills in dev and CI by pushing my way through new subjects like infrastructure, cloud, automation, orchestration, security, high availability, monitoring, performance...
+ 
+ \vspace{-4pt}
+ \qquad   I appreciate being able to get a global understanding of a project, finding the best way to achieve final goal function of constraint and taking care of consequences of what is done. 
+ 
+ \vspace{-4pt}
+ \qquad  I'm an Open Source believer.  
+\section{Experience}
+\setlength{\parsepsave}{\parsep}% Store \parsep
+\setlength{\parsep}{8.0pt}% New/update \parsep
+\begin{entrylist}	
+	\entryDate
+		{08/2018 }
+		{Cloud \& DevOps Architect}
+		{Freelance}
+		{
+			- Support customer defining and implementing \textbf{OpenShift} production architecture on \textbf{AWS} and on \textbf{hybrid cloud (on premise and Azure)}.  \\
+			- Implementation of automation (\textbf{Terraform, Ansible}), CI (Jenkins) and ramping up of teams skills.  \\	
+		 - Customers : Sopra Steria, Storengy
+		}
+	\entryDate
+		{12/2017 \\ 08/2018 }
+		{Cloud \& DevOps Architect}
+		{Red Hat}
+		{	
+			- Definition of Openshift architecture on Cloud or on premise. \\
+			- Advise and assist customers on key steps on their move to DevOps, HA, resiliency, \textbf{Infrastructure as Code}, \textbf{monitoring}, automation, CI, \textbf{security}... \\
+			- Some customers : AXA, La poste, Amadeus, Natixis, Airbus, SNCF, MyCOM Groupama...    
+		}
+	\entryDate
+		{10/2015 \\ 12/2017}
+		{Midleware \& DevOps Consultant}
+		{Red Hat}
+		{ 
+			- \textbf{OpenShift} deployment adapted to customer constraints and automation. \\ 
+			- Assist customers on subject around Red Hat technology, DevOps, application development, JBoss, \textbf{Docker, Kubernetes}, monitoring, security... \\ 
+			- DevOps and \textbf{CI/CD} coaching with practical implementation. \\ 
+			- Training and knowledge transfer.
+		}	
+	\entryDate
+	 	{06/2013 \\  09/2015}
+		{Senior Software Engineer}
+		{STET}
+		{ 
+			- Migration from IBM to \textbf{Open Source} (Application server, SSO stack)			\\
+			- \textbf{Performance} benchmark \\ 
+		 	- Automation tools development to deploy middleware \\
+		 	- CI tools development 
+	 	} 
+	\entryDate
+		{09/2011 \\ 04/2013}
+		{Technical Project Manager}
+		{Saint Gobain}
+		{
+			Leading multiple project from development and testing to business delivery. Working with offshore indian team. Managing all aspect of project including budget, application architecture and troubleshooting }
+	\entryDate
+		{10/2009 \\ 07/2011}    
+		{Technical Project Leader}
+		{Euler Hermes}
+		{Client website maintenance in a team of 5 developers }
+	\entryDate
+		{11/2007 \\ 10/2009}
+		{Software engineer}
+		{AXA Banque}
+		{Working in the IT Architect team on the rebuild of AXA Banque client website}
+	\end{entrylist}
+\setlength{\parsep}{\parsepsave}% Restore \parsep
+\\
+\newpage
+
+\begin{aside}
+~
+~
+~
+\section{DevOps}
+~  
+\smartdiagram[bubble diagram]{
+	\textbf{Container},
+	\textbf{Docker},
+	\textbf{Jenkins},
+	\textbf{Infra as Code},
+	\textbf{Kubernetes},
+	\textbf{OpenShift},
+	\textbf{CI/CD},
+	\textbf{Linux}
+}
+~  
+\section{Programming}
+~  
+\smartdiagram[bubble diagram]{
+	\textbf{Java},
+	\textbf{Bash},
+	\textbf{Scala},
+	\textbf{Ansible},
+	\textbf{Terraform},
+	\textbf{Jenkins}\\\textbf{pipeline},
+	PHP\\JS
+}
+    ~
+   	\section{Interest}
+   	~  
+    	\textbf{Yoga}
+    	\textbf{Travel} 
+    	\textbf{Reading} 
+    	\textbf{Zero waste}        	
+    	~
+\end{aside}
+\section{Education}
+\begin{entrylist}
+	\entry
+	{2007}
+	{ESIEA Paris - Ecole Supérieure d’Informatique \\  Electronique Automatique}
+	{France}
+	{Master's degree in Engineering}
+	\entry
+	{2005}
+	{DCU - Dublin City University}
+	{Ireland}
+	{Computer Science – One semester exchange}	
+\end{entrylist}
+\section{Certifications}        
+    \textbf{ Red Hat (id: 160-101-879 ) \vspace{0.1cm}\\}        
+	\begin{entrylist}
+	
+	\setlength{\parsepsave}{\parsep}% Store \parsep
+	\setlength{\parsep}{-3pt}% New/update \parsep
+	
+	\entryNoDetail
+		{11/2016}
+		{Red Hat Certified Specialist in Ansible Automation}
+	    {EX407}
+	    \entryNoDetail
+	    {07/2016}
+	    {Red Hat Certified Specialist in OpenShift Administration}
+	    {EX280}
+	    \entryNoDetail
+	    {07/2016}
+	    {RHCSA : Red Hat Certified System Administrator }
+	    {EX200}   
+	    \entryNoDetail
+	    {06/2016}
+	    {Red Hat Certificate of Expertise in Containerized Application \\ Development}
+	    {EX276}
+	\end{entrylist}    
+	\textbf{Coursera \vspace{0.1cm}\\}    
+	\begin{entrylist}
+	\entryNoDetail
+		{05/2015} 
+		{Principles of Reactive Programming }
+		{EPFL}
+		\entryNoDetail
+		{11/2014}
+		{Functional Programming Principles in Scala}
+		{EPFL}
+	\end{entrylist}    
+\section{Speaker}  
+\setlength{\parsepsave}{\parsep}% Store \parsep
+\setlength{\parsep}{3pt}% New/update \parsep
+	\begin{entrylist}	
+		\entry
+		{05/2018}
+		{OpenShift Meetup France}
+		{Paris}
+		{Comment Openshift vous facilite Kubernetes }	
+		\entry
+		{05/2018}
+		{RivieraDev}
+		{Nice}
+		{Comment Openshift vous facilite Kubernetes }	
+		\entry
+		{01/2018 }
+		{Duchess France Meetup}
+		{Paris}
+		{Docker Kubernetes and OpenShift}	
+		\entry
+		{09/2017}
+		{Red Hat Tech Exchange}
+		{Barcelona}
+		{OpenShift in Production: 7 traps not to fall in}	
+		\entry
+		{06/2017}
+		{Paris Container Day}
+		{Paris}
+		{OpenShift en production: 7 pièges à éviter } 
+	\end{entrylist}
+\setlength{\parsep}{\parsepsave}% Restore \parsep
+\\
+
+\qquad \qquad  \includegraphics[height=13mm]{logo/openshift-logo.png}    \qquad \qquad  \includegraphics[height=13mm]{logo/kubernetes-logo.png}  \qquad \qquad 	\includegraphics[height=13mm]{logo/docker-logo.png}  \qquad \qquad 
+\vspace{2mm}
+
+\includegraphics[height=13mm]{logo/ansible-logo.png} \qquad \qquad 
+\includegraphics[height=13mm]{logo/terraform-logo.png} \qquad \qquad 
+\includegraphics[height=13mm]{logo/prometheus-logo.png} \qquad \qquad 
+\includegraphics[height=13mm]{logo/grafana-logo.png} \qquad \qquad 
+\vspace{2mm}
+
+\qquad \qquad   \includegraphics[height=15mm]{logo/jenkins-logo.png} \qquad  \qquad
+\includegraphics[height=13mm]{logo/git-logo.png} \qquad
+\includegraphics[height=15mm]{logo/java-logo.png} \qquad 
+\includegraphics[height=13mm]{logo/scala-logo.png} \qquad 
+\includegraphics[height=13mm]{logo/bash-logo.png} \qquad
+\vspace{3mm}
+
+\includegraphics[height=13mm]{logo/linux-logo.png} \qquad \qquad
+\includegraphics[height=13mm]{logo/fedora-logo.png} \qquad \qquad
+\includegraphics[height=13mm]{logo/redhat-logo.png} \qquad
+\includegraphics[height=13mm]{logo/aws-logo.png}\qquad 
+\includegraphics[height=13mm]{logo/azure-logo.png} \qquad
+\\ 
+\\ 
+\\ 
+\begin{flushright}
+\emph{Eloise Faure}
+\end{flushright}
+\end{document}
