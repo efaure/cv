@@ -51,8 +51,9 @@
 \definecolor{pblue}{HTML}{0395DE}
 
 \begin{document}
-\header{}{Eloïse Faure}
-      {Cloud \& DevOps Architect}
+	
+\header{}{Eloïse Faure}		
+		 {Cloud \& DevOps Architect}
       
 % Fake text to add separator      
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
@@ -64,10 +65,14 @@
   \includegraphics[scale=0.36]{img/eloise.png}
   ~
   \section{Personnal information}
-  ~
-{\includegraphics[width=0.4cm]{img/mobile_icon.pdf}} \textbf{ +33 6 98 81 42 30 }  \vspace{6pt}
-%
+  ~    
+ \ifdefined\PhoneNumber %
+ 	{\includegraphics[width=0.4cm]{img/mobile_icon.pdf}} \textbf{ \PhoneNumber }  \vspace{6pt} 
+ 	%
+  \fi %
 \raisebox{-2\lineskip}{\includegraphics[width=0.4cm]{img/mail_icon.pdf}}  \href{mailto:faure.eloise@gmail.com}{\textbf{faure.eloise@}gmail.com}\vspace{4pt}
+%
+\raisebox{-2\lineskip}{\includegraphics[width=0.4cm]{img/linkedin.png}}  \href{https://fr.linkedin.com/in/eloisefaure}{ /eloisefaure}
 %
 {\includegraphics[width=0.4cm]{img/localisation.png}}  Argenteuil, France \vspace{4pt}
 %
